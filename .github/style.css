@@ -1,0 +1,39 @@
+.navbar {
+    width: 50%;
+    height: 30%;
+    justify-content: space-between;
+    display: flex;
+    overflow: hidden;
+  }
+  
+  .navbar-berger {
+    cursor: pointer;
+    padding: 15px 20px;
+  }
+  
+  .bar {
+    width: 20px;
+    height: 3px;
+    background-color: black;
+    margin: 5px 0;
+  }
+
+  .navabar-img{
+    width: 40px;
+    height: 40px;
+    top: 10px;
+  }
+
+  .navabar-parg{
+    font-family: Georgia, serif;
+    font-size: 1.5rem;
+    top: 10px;
+  }
+
+  .navbar-recher{
+    width: 100%;
+    height: 40px;
+    border-radius: 5px;
+    border: solid 1px  #D3D3D3;
+    background-color:  #e3e3e3;
+  }

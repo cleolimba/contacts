@@ -3,14 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Projet</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <img src="" alt="">
-    <img src="img/profil.png" alt="profil">
-    <p>Contacts</p>
-
-    <input type="recherche">
+    <div class="navbar">
+        <div class="navbar-berger" onclick="bergerMenu()">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+        </div>
+        <img src="profil.png" alt="" class="navabar-img">
+        <p class="navabar-parg"><strong>Contacts</strong></p>
+        <input type="text" placeholder="Rechercher..." class="navbar-recher">
+    </div>
+    <script src="index.js"></script>
 </body>
 </html>
