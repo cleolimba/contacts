@@ -100,7 +100,25 @@ body{
   }
 
   .labels{
-    background-color: red;
     left: 20px;
-    width: 50px;
+    width: 25%;
+    padding-left: 30px;
+    
+    color: black;
+  }
+  
+  .lib{
+    text-decoration: none;
+  }
+
+  .bureau{
+    color: black;
+    padding-left: 80px;
+  }
+
+  .fenetre{
+    background-color: red;
+    width: 15%;
+    height: 20%;
+    top: 10%;
   }
