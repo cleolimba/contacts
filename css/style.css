@@ -1,148 +1,236 @@
-/* mon header */
+/* globals */
 
-.navbar {
-    display: flex;
-    width: 100%;
-    align-items: center;
-    gap: 12px;
+* {
+  /* font-family: Arial, Helvetica, sans-serif; */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.image{
-  width: 24px;
-  height: 24px;
-}
-.navabar-img{
-    width: 39px;
-    height: 39px;
-    gap: 0px;
-    opacity: 0px;
-
-}
-.navabar-parg{
-    font-family: Product Sans;
-    font-size: 1.5rem;
-    top: 10px;
+:root{
+  --gray: #CCCCCC;
+  --white: #fff;
+  --blue: #C2E7FF;
+  --light: #77B5FE;
+  --clear: #77B5FE;
+  --red: #ff0000;
 }
 
-.barreRecherche{
+body{
+  margin: 0;
+  padding: 0;
+  /* min-width: 100vh;
+  overflow-x: hidden; */
+}
+
+.container{
+  position: relative;
+  width: 100%;
+}
+
+/* partie header */
+
+.header{
+  /* background-color: blue; */
+  width: 55%;
   display: flex;
   align-items: center;
-  margin-right: 30%;
-  justify-content: end;
+  justify-content: space-around;
+  
+}
+.header img{
+  max-width: 40px;
 }
 
-.btnRecher{
+.headerMenu:hover{
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ff0000;
+  cursor: pointer;
+  transition: 0.4s transform linear;
+  transform: rotate(10deg);
+}
+
+.header ion-icon{
   width: 20px;
   height: 20px;
+}
+.partieOverlay{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vh;
+  height: 100vh;
+  background-color: rgb(0, 0, 0, 0.4);
+  display: none;
+}
+
+.partieOverlay .active{
+  display: block;
+}
+/* .navigation{
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 300px;
+  height: 100vh;
+  background-color: yellow;
+  width: 300px;
+  height: 100%;
+  background: var(--red);
+  border-left: 10px solid var(--white);
+  transition: 0.5s;
+  *
+} */
+/* navigation */
+
+
+.navigation ul{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+.navigation ul li{
+  position: relative;
+  width: 100%;
+  list-style: none;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+}
+.navigation ul li:hover,
+.navigation ul li.hovered{
+  background-color: var(--white);
+}
+.navigation ul li:nth-child(1){
+  margin-bottom: 40px;
+  pointer-events: none;
+}
+.navigation ul li a{
+  position: relative;
+  display: block;
+  width: 100%;
   display: flex;
-  align-items: center;
+  text-decoration: none;
+  color: var(--white);
 }
-
-.navbar-recher{
-  width: 50%;
-  height: 40px;
-  border-radius: 5px;
-  border: none;
-  background-color:  white;
+.navigation ul li:hover a,
+.navigation ul li.hovered a{
+  color: var(--red);
 }
-
-/* partie menue */
-
-.menue{
-  margin-top: 10%;
+.navigation ul li a .icon{
+  position: relative;
+  display: block;
+  min-width: 60px;
+  height: 60px;
+  line-height: 75px;
+  text-align: center;
 }
-
-.btnAdd{
-  padding-left: 15px;
-  width: 15%;
-  height: 20%;
+.navigation ul li a .icon ion-icon{
+  font-size: 1.75rem;
 }
-
-.btnCree{
+.navigation ul li a .title{
+  position: relative;
+  display: block;
+  padding: 0 10px;
+  height: 60px;
+  line-height: 60px;
+  text-align: start;
+  white-space: nowrap;
+}
+.toggle{
+  position: relative;
+  width: 30px;
+  height: 30px;
   display: flex;
-  align-items: center;
-  background-color: #C2E7FF;
-  border-radius: 20px;
   justify-content: center;
+  align-items: center;
+  font-size: 2.5rem;
   cursor: pointer;
+  color: black;
 }
-
-.btnContact{
-    background-color: #C2E7FF;
-    padding: 14px;
-    border: solid 1px #C2E7FF;
-    font-size: 14px;
-    font-family: Product Sans;
-    text-align: end;
-    cursor: pointer;
-    margin-bottom: 10%;
-   
-}
-
-.btnCree:hover{
-  box-shadow: 10px 10px 10px #CCCCCC;
-}
-
-.contactFrequent{
-  width: 25%;
+/* .user{
+  position: relative;
+  width: 40px;
   height: 40px;
-  background-color: #C2E7FF;
-  border-radius: 16px;
-  padding: 14px;
-  border: solid 1px #C2E7FF;
-  font-size: 14px;
-  font-family: Product Sans;
-  text-align: end;
+  border-radius: 50%;
+  overflow: hidden;
   cursor: pointer;
-  margin-bottom: 10%;
-  margin-top: 10%;
+} */
+
+/* courbe à l'extérieur */
+
+.navigation ul li:hover a::before,
+.navigation ul li.hovered a::before{
+  content: "";
+  position: absolute;
+  right: 0;
+  top: -50px;
+  width: 50px;
+  height: 50px;
+  background-color: transparent;
+  border-radius: 50%;
+  box-shadow: 35px 35px 0 10px var(--white);
+  pointer-events: none;
+}
+.navigation ul li:hover a::after,
+.navigation ul li.hovered a::after{
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: -50px;
+  width: 50px;
+  height: 50px;
+  background-color: transparent;
+  border-radius: 50%;
+  box-shadow: 35px -35px 0 10px var(--white);
+  pointer-events: none;
 }
 
-  .addContact{
-    background-color: #C2E7FF;
-    text-align: start;
-    width: 100%;
-    margin-bottom: 10%;
-    border: solid 1px #C2E7FF;
-  }
+/* principale */
 
-  .btn-add:hover{
-    background-color: #77B5FE;
-  }
-
-  
-  .add-frequent{
-    text-align: start;
-    width: 100%;
-    height: 40px;
-    background-color: #e3e3e3;
-  }
-
-  .add-frequent:hover{
-    background-color: #CCCCCC;
-    border: solid 1px #CCCCCC;
-  }
-
-  .labels{
-    left: 20px;
-    width: 25%;
-    padding-left: 30px;
-    
-    color: black;
-  }
-  
-  .lib{
-    text-decoration: none;
-  }
-
-  .bureau{
-    color: black;
-    padding-left: 80px;
-  }
-
-  .fenetre{
-    word-spacing: normal;
-    width: 15%;
-    height: 20%;
-    top: 10%;
-  }
+.main{
+  position: absolute;
+  width: calc(100% - 300px);
+  left: 300px;
+  min-height: 100vh;
+  background: var(--white);
+  transition: .5s;
+}
+.topbar{
+  width: 100%;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+}
+.search{
+  position: relative;
+  width: 400px;
+  margin: 0 10px;
+}
+.search label{
+  position: relative;
+  width: 100%;
+}
+.search label input{
+  width: 100%;
+  height: 40px;
+  padding: 5px 20px;
+  padding-left: 35px;
+  font-size: 18px;
+  border: none;
+  padding: 5px 20px;
+  outline: none;
+  background: transparent;
+}
+.search label{
+  display: flex;
+  align-items: center;
+  background: var(--gray);
+  border-radius: 60px;
+}
