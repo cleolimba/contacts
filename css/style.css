@@ -1,8 +1,8 @@
 /* globals */
 
-* {
+/* * { */
   /* font-family: Arial, Helvetica, sans-serif; */
-  margin: 0;
+  /* margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
@@ -18,25 +18,36 @@
 
 body{
   margin: 0;
-  padding: 0;
+  padding: 0; */
   /* min-width: 100vh;
   overflow-x: hidden; */
-}
+/* } */
 
-.container{
+/* .container{
   position: relative;
   width: 100%;
-}
+} */
 
 /* partie header */
 
-.header{
-  /* background-color: blue; */
-  width: 55%;
+/* .header{
+  background-color: blue;
+  width: 100%;
+  margin-top: 20px;
   display: flex;
   align-items: center;
   justify-content: space-around;
+  padding-left: 5%;
   
+}
+.headerNavigation{
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
+.iconBerger{
+  color: var(--white);
 }
 .header img{
   max-width: 40px;
@@ -49,7 +60,7 @@ body{
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #ff0000;
+  background-color: var(--gray);
   cursor: pointer;
   transition: 0.4s transform linear;
   transform: rotate(10deg);
@@ -59,78 +70,92 @@ body{
   width: 20px;
   height: 20px;
 }
+
+
 .partieOverlay{
   position: fixed;
-  top: 0;
   left: 0;
   width: 100vh;
   height: 100vh;
-  background-color: rgb(0, 0, 0, 0.4);
+  background-color: var(--gray)
   display: none;
 }
 
 .partieOverlay .active{
   display: block;
-}
+} */
+
+/* navigation */
 /* .navigation{
   position: fixed;
-  top: 0;
-  right: 0;
+  top: 10%;
+  left: 0;
   width: 300px;
   height: 100vh;
-  background-color: yellow;
-  width: 300px;
-  height: 100%;
-  background: var(--red);
-  border-left: 10px solid var(--white);
-  transition: 0.5s;
-  *
+  background: var(--red); */
+  /* border-left: 10px solid var(--white); */
+  /* transition: 0.5s;
+  padding: 50px 20px;
 } */
-/* navigation */
-
-
-.navigation ul{
+/* .navigation ul{
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-}
-.navigation ul li{
+} */
+/* .navigation ul li{
   position: relative;
   width: 100%;
   list-style: none;
   border-top-left-radius: 30px;
   border-bottom-left-radius: 30px;
-}
-.navigation ul li:hover,
+  padding: 0;
+  margin: 0;
+  margin-top: 20px;
+  margin-bottom: 20px;
+} */
+
+/*.navigation ul li:hover,
 .navigation ul li.hovered{
   background-color: var(--white);
 }
 .navigation ul li:nth-child(1){
   margin-bottom: 40px;
   pointer-events: none;
-}
-.navigation ul li a{
-  position: relative;
-  display: block;
-  width: 100%;
-  display: flex;
+}*/
+/* .navigation ul li a{
+  margin-bottom: 20px;
+  color: black;
   text-decoration: none;
-  color: var(--white);
+  display: inline-flex;
+  align-items: center;
+  font-family: Arial, Helvetica, sans-serif ;
+  font-weight: lighter;
+  font-size: 15px;
 }
-.navigation ul li:hover a,
+.navigation ul li a::after{
+  content: '';
+  height: 1px;
+  width: 0px;
+  background-color: #fff;
+  position: absolute;
+  bottom: -6px;
+  right: 0;
+} */
+/* .navigation ul li a:last-of-type{
+  margin-bottom: initial;
+} */
+/*.navigation ul li:hover a,
 .navigation ul li.hovered a{
   color: var(--red);
-}
-.navigation ul li a .icon{
-  position: relative;
-  display: block;
-  min-width: 60px;
-  height: 60px;
-  line-height: 75px;
-  text-align: center;
-}
-.navigation ul li a .icon ion-icon{
+}*/
+/* .navigation ul li a .icon{
+  stroke: var(--white);
+  width: 18px;
+  height: 18px;
+  margin-right: 20px;
+} */
+/*.navigation ul li a .icon ion-icon{
   font-size: 1.75rem;
 }
 .navigation ul li a .title{
@@ -141,8 +166,8 @@ body{
   line-height: 60px;
   text-align: start;
   white-space: nowrap;
-}
-.toggle{
+}*/
+/* .toggle{
   position: relative;
   width: 30px;
   height: 30px;
@@ -152,7 +177,7 @@ body{
   font-size: 2.5rem;
   cursor: pointer;
   color: black;
-}
+} */
 /* .user{
   position: relative;
   width: 40px;
@@ -164,7 +189,7 @@ body{
 
 /* courbe à l'extérieur */
 
-.navigation ul li:hover a::before,
+/* .navigation ul li:hover a::before,
 .navigation ul li.hovered a::before{
   content: "";
   position: absolute;
@@ -189,11 +214,11 @@ body{
   border-radius: 50%;
   box-shadow: 35px -35px 0 10px var(--white);
   pointer-events: none;
-}
+} */
 
 /* principale */
 
-.main{
+/* .main{
   position: absolute;
   width: calc(100% - 300px);
   left: 300px;
@@ -207,6 +232,7 @@ body{
   display: flex;
   align-items: center;
   padding: 0 10px;
+  margin-left: 25%;
 }
 .search{
   position: relative;
@@ -233,4 +259,4 @@ body{
   align-items: center;
   background: var(--gray);
   border-radius: 60px;
-}
+} */
