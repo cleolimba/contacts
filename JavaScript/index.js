@@ -17,52 +17,21 @@ valDome.addEventListener('click', function(){
 
 )
 
+// propriéte pour faire fonctionner le bouton ajouter contacts
 
+document.querySelector('.addContact').addEventListener('click', function(){
+    
+    const main_content = document.getElementById('main-content');
+    const contactsContent = document.getElementById('contents');
+    const popupForm = document.getElementById('popup');
 
-// const domValu = document.getElementById("btn");
-// console.log(domValu)
-// domValu.addEventListener("click",function(){
-//     if (domValu.style.display === "none") {
-//         document.getElementById("main-menu").style.display = "block";
-//         document.getElementById("main").style.display = "block";
-//         // document.getElementById("main-content").style.marginLeft ="25%";
-//         // document.getElementById("main-content").style.width ="80%";
-//     }
-//     else{
-//         document.getElementById("main-menu").style.display = "none";
-//         document.getElementById("main-content").style.marginLeft ="0%";
-//         document.getElementById("main-content").style.width ="100%";
-//     }
-// });
-
-
-
-// ajout d'une classe survolée pour sélectionner un élément de liste
-// let list = document.querySelectorAll(".navigation li");
-
-// function activeLink(){
-//     list.forEach(item=> {
-//         item.classList.remove("hovered");
-//     })
-//     this.classList.add("hovered");
-// }
-
-// list.forEach(item => item.addEventListener("mouscover", activeLink))
-
-// menue
-
-// function toggleMenu() {
-//     const navMobile = document.querySelector('.navMobile');
-//     const partieOverlay = document.querySelector('.navMobile');
-
-//     if(navMobile.classList.contains('active')) {
-//         navMobile.classList.add('active');
-//     } else {
-//         navMobile.classList.add('active');
-//     }
-// }
-// function bergerMenu() {
-//     var menu = document.querySelector('.menu');
-//     menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
-//   }
-  
+    if (popupForm.classList.contains("invisible")) {
+    console.log(document.getElementById('contents'))
+        contactsContent.classList.add("invisible");
+        popupForm.classList.remove("invisible");
+        
+    }else {
+        contactsContent.classList.remove("invisible");
+        popupForm.classList.add("invisible");
+    }
+});
