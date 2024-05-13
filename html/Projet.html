@@ -7,157 +7,105 @@
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
+</head>
 <body>
-    
-    <!-- La première partie -->
 
-    <header>
-    </header>
-</body>
-</html>
-<!-- <!DOCTYPE html>
-<html lang="fr"><head>
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projet</title>
-    <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-<body> -->
-    <!-- header -->
-
-    <!-- <header class="header">
+   <!-- La première partie -->
+   
+    <header class="header">
         <div class="headerNavigation">
             <div class="headerMenu">
-            <span class="iconBerger" onclick="toggleMenu()">
-                <ion-icon name="menu-outline"></ion-icon>
-            </span>
+                <span class="iconBerger">
+                    <ion-icon id="btn" name="menu-outline" style="height: 40px; width: 40px;"></ion-icon>
+                </span>
             </div>   
             <span><img src="/image/profil.png" alt="" class="user"></span>
             <span><span class="title">Contact</span></span>
-        </div>
         
-        <div class="topbar">
+        </div>
+        <div class="input-box">
             <div class="search">
-                <label>
-                    <span class="material-symbols-outlined">search</span>
-                    <input type="text" placeholder="Recherche">
-                </label>
+                <span class="material-symbols-outlined">search</span>
+            </div>
+            <input type="text" placeholder="Rechercher...">
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="main__menu" id="main-menu">
+            <div class="boutons">
+                <div class="addContact">
+                    <span class="material-symbols-outlined">add</span>
+                    <button class="contact">Crée un contact</button>
+                </div>
+            </div>
+            <div class="popup" id="popup">
+                <form class="container">
+                    <div class="image">  <!--la première partie-->
+                        <span class="material-symbols-outlined">arrow_back</span>
+                        <span class="material-symbols-outlined">grade</span>
+                        <button type="submit">Enregistrer</button>
+                       <!-- <span id="close" class="close">&times;</span>  le signe qui permet de retourne -->
+                        <img src="/image/imageRemplace.png" alt="" class="auto">   <!--ici il a fini la première partie-->
+                        <span class="material-symbols-outlined">add_circle</span>
+                    </div>
+                    <div class="content">  <!--la deuxième partie ici pour remplire le nom-->
+                        <span class="material-symbols-outlined">person</span>
+                        <input type="text" class="textzone" placeholder="Prénom">
+                        <span class="material-symbols-outlined">expand_more</span>
+                        <input type="text" class="textzone" placeholder="Nom">
+                        <div>
+                            <span class="material-symbols-outlined">source_environment</span>
+                            <input type="text" class="textzone" placeholder="Entreprise">
+                            <span class="material-symbols-outlined">expand_more</span>
+                            <input type="text" class="textzone" placeholder="Fonction">
+                        </div>
+                        <div>
+                            <span class="material-symbols-outlined">mail</span>
+                            <input type="text" class="textzone" placeholder="E-mail">
+                        </div>
+                        <span class="material-symbols-outlined">add</span>
+                        <button>Ajouter une adresse e-mail</button>
+                        <span id="close" class="close">&times;</span>
+                        <label><strong>Passeword:</strong></label>
+                        <input type="password" class="textzone" placeholder="Taper vôtre mt de passe">
+                                        
+                    </div>
+                    <div class="content">  <!--la troisème-->
+                        <button id="btnreset" class="btnreset">Annuler</button>
+                    </div>
+                </form>
+            </div>
+            <div class="btnContact">
+                    <span class="material-symbols-outlined">person</span>
+                    <button class="contact">Contacts</button>
+            </div>
+            <div class="btnFrequent">
+                <span class="material-symbols-outlined">history</span>
+                <a href="#" class="frequent">Fréquents</a>
+            </div>
             </div>
         </div>
-    </header> -->
-
-    <!-- navigation -->
-
-    <!-- <div class="navMobile">
-        <div class="navigation">
-            <ul>
-                <li>
-                </li>
-                <li>
-                    <a href="#">
-                        <span class="icon">
-                            <span class="material-symbols-outlined">add</span>
-                        </span>
-                        <span><span class="title">Créer un contact</span></span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <span class="icon">
-                            <span class="material-symbols-outlined">person</span>
-                        </span>
-                        <span><span class="title">Contact</span></span>                    
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <span class="icon">
-                            <span class="material-symbols-outlined">history</span>
-                        </span>
-                        <span><span class="title">Fréquent</span></span>             
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <span class="icon">
-                            <span><span class="title">Libellés</span></span>
-                        </span>
-                        <span class="material-symbols-outlined">add</span>       
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <span class="icon">
-                            <span class="material-symbols-outlined">label</span>
-                        </span>
-                        <span><span class="title">Bureau</span></span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <span class="icon">
-                            <span class="material-symbols-outlined">label</span>
-                        </span>
-                        <span><span class="title">Bureau</span></span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <span class="icon">
-                            <span class="material-symbols-outlined">label</span>
-                        </span>
-                        
-                        <span><span class="title">Amis</span></span>
-                    </a>
-                </li>
-            </ul>
-        </div>
-        <div class="partieOverlay"></div> -->
-
-
-        <!-- principale -->
-        <!-- <div class="main">
-            
-        </div>
-    </div> -->
-    <!-- <div class="navbar">
-       <img src="/SVG/list.svg" alt="" class="image"> 
-       <img src="/image/profil.png" alt="" class="navabar-img">
-        <p class="navabar-parg"><strong>Contacts</strong></p>
-        <div class="barreRecherche">
-                <div class="btnRecher">
-                    <img src="/SVG/search (1).svg" alt="">
+        <div class="main__content" id="main-content">
+            <div>
+                <h2 class="pageVeriege"> Contacts</h2>
+                <img src="/image/accuielle.png" alt="" class="accueil">
+                <p class="parag">Aucun contact pour l'instant</p>
+                <div class="basPhoto">
+                    <div class="btnAcueilAddContact">
+                        <span class="material-symbols-outlined" id="basPage">person</span>
+                        <button class="btnCreer">Créer un <br>contact</button>
+                    </div>
+                    <div class="btnAcueilAddContact">
+                        <span class="material-symbols-outlined" id="basPage">offline_bolt</span>
+                        <button class="btnCreer">Contacts <br>d'importation</button>
+                    </div>
                 </div>
-                <input type="text" placeholder="Rechercher..." class="navbar-recher">
-        </div> -->
-    <!-- </div>
-    <div class="menue">
-        <div class="btnAdd">
-			<div class="btnCree">
-					<div class="btnPus">
-						<img src="/SVG/plus-lg (2).svg" alt="">
-					</div>
-					<a href="http://127.0.0.1:5500/.github/index.html#"><button id="ajouteContact" class="btnContact">Créer un contact</button></a>
-			</div>
-		</div>
-		<div class="contactFrequent">
-			<a href="http://127.0.0.1:5500/.github/index.html#"><button class="addContact">Contact</button></a>
-            
-		</div>
-		<a href="http://127.0.0.1:5500/.github/index.html#"><button class="btn-add add-frequent">Fréquents</button></a>
-	
-        <a href="http://127.0.0.1:5500/.github/index.html#" class="lib"><p class="labels"><strong>Libellés</strong></p></a>
-        <div class="fenetre">
-            <a href="http://127.0.0.1:5500/.github/index.html#" class="lib"><p class="bureau"><svg width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M14 8.5H8V14.5H6V8.5H0V6.5H6V0.5H8V6.5H14V8.5Z" fill="#001D35"></path>
-                </svg>
-                Bureau</p></a>
-            <a href="http://127.0.0.1:5500/.github/index.html#" class="lib"><p class="bureau">Bureau</p></a>
-            <a href="http://127.0.0.1:5500/.github/index.html#" class="lib"><p class="bureau">Amis</p></a>
+            </div>
         </div>
-    </div> -->
-    <!-- <script src="./Projet_files/index.js"></script>
-    <script  type = "module"  src = "https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js" > </script > 
-        <script  nomodule  src = "https://unpkg .com/ionicons@7.1.0/dist/ionicons/ionicons.js" > </script >
+    </main>
+    <script src="/JavaScript/index.js"></script>
+    <script  type = "module"  src = "https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"> </script> 
+    <script  nomodule  src = "https://unpkg .com/ionicons@7.1.0/dist/ionicons/ionicons.js"> </script>
 </body>
-</html> -->
+</html>
