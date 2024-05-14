@@ -44,7 +44,8 @@
             </div>
             <div class="btnContact">
                 <span class="material-symbols-outlined">person</span>
-                <button class="contact">Contacts</button>
+                <input type="button" class="contact" value="Contacts"/>
+                <!-- onclick="contact_table()" -->
             </div>
             <div class="btnFrequent">
                 <span class="material-symbols-outlined">history</span>
@@ -108,7 +109,7 @@
                         </div>
                         <div>
                             <span class="material-symbols-outlined">mail</span>
-                            <input type="text" class="textzone" placeholder="E-mail">
+                            <input type="email" class="textzone" placeholder="E-mail">
                         </div>
                     </div>
                     <span class="material-symbols-outlined">add</span>
@@ -117,7 +118,7 @@
                     <div>
                         <span class="material-symbols-outlined">call</span>
                         <select name="code" id=""></select>
-                        <input type="text" placeholder="Téléphone">
+                        <input type="tel" placeholder="Téléphone">
                     </div>
                     <div>
                         <span class="material-symbols-outlined">add</span>
@@ -129,9 +130,7 @@
                     </div>
                     <div>
                         <span class="material-symbols-outlined">cake</span>
-                        <select name="jour" id="">Jour</select>
-                        <input type="text" placeholder="Mois">
-                        <input type="text" placeholder="Année (facultatif)">
+                        <input type="date" name="" id="">
                     </div>
                     <div>
                         <span class="material-symbols-outlined">summarize</span>
@@ -139,6 +138,10 @@
                     </div>
                     <a href="#">Plus</a>
                 </form>
+            </div>
+            <div class="tableau invisibles" id="tableau">
+                <h1>Contact</h1>
+                <p>Tableau des contacts enregistrer</p>
             </div>
         </div>
     </main>
