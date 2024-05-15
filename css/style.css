@@ -358,3 +358,61 @@ ion-icon:hover{
 .invisibles{
   display: none;
 }
+
+/* Bouton libelles et ses actions */
+
+.btnlabel{
+  display: flex;
+  align-items: center;
+}
+.labelBtn{
+  background-color: rebeccapurple;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  width: 100%;
+  cursor: pointer;
+}
+.labelBtn:hover{
+  opacity: .6;
+}
+.labelBtn{
+  width: 150px;
+  margin: auto;
+  display: block;
+}
+.btnLibelle{
+  position: fixed;
+  z-index: 99;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0,0,0,.6);
+  padding-top: 60px;
+  display: none;
+}
+.libelleContent{
+  background-color: #F0EDED;
+  border: 1px solid #C9C5C5;
+  margin: 5% auto 10% auto;
+  width: 40%;
+  height: 40%;
+}
+.contenueLibelle{
+  padding: 16px;
+}
+.textName{
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #CCC;
+  box-sizing: border-box;
+}
+.submit{
+  width: auto;
+  padding: 10px 20px;
+  background: red;
+}

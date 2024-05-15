@@ -76,3 +76,18 @@ document.querySelector('.btnContact').addEventListener('click', function(){
         tableauContacts.classList.add("invisibles");
     }
 });
+
+//la partie libellés
+
+let bopen = document.querySelector('#open');
+let btnreset = document.querySelector('#btnreset');
+
+function afficher() {
+    document.querySelector('#libelles');
+}
+function masquer() {
+    document.querySelector('#libelles'); style.display = "none";
+}
+
+bopen.addEventListener("click",afficher);
+btnreset.addEventListener('click',masquer);
