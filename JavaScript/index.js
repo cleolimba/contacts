@@ -38,25 +38,40 @@ document.querySelector('.addContact').addEventListener('click', function(){
 
 // propriéte pour enregistre le tableau
 
-function contact_table() {
-    let body = document.getElementsByTagName("body") [0];
-    let tbl = document.createElement("table");
-    let tblBody = document.createElement("tbody");
+function addContact() {
+    // Récupérer les valeurs du formulaire
+    const prenom = document.getElementById('prenom').value;
+    // const name = document.getElementById('name').value;
+    const entreprise = document.getElementById('entreprise').value;
+    const enregistre = document.getElementById('entreprise').value;
+    const fonction = document.getElementById('fonction').value;
+    const email = document.getElementById('email').value;
+    const phone = document.getElementById('phone').value;
 
-    // for (var i = 0; i < 2; i++) {
-        let row = document.createElement("tr");
-        // for (var j = 0; j < 2; j++) {
-            let cell = document.createElement("td");
-            // let text = "valeur "+ j;
-            // cell.textContent=text;
-            row.appendChild(cell);
-        }
-        // tblBody.appendChild(row);
+    // Créer une nouvelle ligne de tableau
+    const tableBody = document.getElementById('contactTableBody');
+    const newRow = tableBody.insertRow();
+
+    // Insérer les nouvelles cellules
+    const prenomcell = newRow.insertCell(0);
+    const emailCell = newRow.insertCell(1);
+    const phoneCell = newRow.insertCell(2);
+    const fonctioncell = newRow.insertCell(3);
+    // const nameCell = newRow.insertCell(1);
+    const enregistrecell = newRow.insertCell(4);
     
-    // tbl.appendChild(tblBody);
-    // body.appendChild(tbl);
-    // tbl.setAttribute("border", "2");
-
+    
+    // Ajouter les valeurs aux cellules
+    prenomcell.textContent = prenom;
+    emailCell.textContent = email;
+    phoneCell.textContent = phone;
+    fonctioncell.textContent = fonction;
+    // nameCell.textContent = name;
+    enregistrecell.textContent = enregistre;
+    
+    // Réinitialiser le formulaire
+    document.getElementById('contactForm').reset();
+}
 
 // bouton enregistre
 
@@ -83,11 +98,14 @@ let bopen = document.querySelector('#open');
 let btnreset = document.querySelector('#btnreset');
 
 function afficher() {
-    document.querySelector('#libelles');
+    document.querySelector('#btnLibelle').style.display="flex";
+    console.log(document.querySelector('#libelles'));
 }
 function masquer() {
     document.querySelector('#libelles'); style.display = "none";
 }
 
-bopen.addEventListener("click",afficher);
+bopen.addEventListener("click",function () {
+    afficher()
+});
 btnreset.addEventListener('click',masquer);

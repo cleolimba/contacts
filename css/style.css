@@ -416,3 +416,20 @@ ion-icon:hover{
   padding: 10px 20px;
   background: red;
 }
+
+/* partie tableau */
+
+form {
+  margin-bottom: 20px;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+table, th, td {
+  border: 1px solid black;
+}
+th, td {
+  padding: 10px;
+  text-align: left;
+}
