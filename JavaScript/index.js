@@ -44,7 +44,7 @@ function addContact() {
     // const name = document.getElementById('name').value;
     const entreprise = document.getElementById('entreprise').value;
     const enregistre = document.getElementById('entreprise').value;
-    const fonction = document.getElementById('fonction').value;
+    // const fonction = document.getElementById('fonction').value;
     const email = document.getElementById('email').value;
     const phone = document.getElementById('phone').value;
 
@@ -54,23 +54,64 @@ function addContact() {
 
     // Insérer les nouvelles cellules
     const prenomcell = newRow.insertCell(0);
-    const emailCell = newRow.insertCell(1);
-    const phoneCell = newRow.insertCell(2);
-    const fonctioncell = newRow.insertCell(3);
+    const phoneCell = newRow.insertCell(1);
+    const emailCell = newRow.insertCell(2);
+    // const fonctioncell = newRow.insertCell(3);
     // const nameCell = newRow.insertCell(1);
+    const entrepriseCell = newRow.insertCell(3);
     const enregistrecell = newRow.insertCell(4);
+    const actionCell = newRow.insertCell(5);
     
     
     // Ajouter les valeurs aux cellules
     prenomcell.textContent = prenom;
-    emailCell.textContent = email;
     phoneCell.textContent = phone;
-    fonctioncell.textContent = fonction;
+    emailCell.textContent = email;
+    // fonctioncell.textContent = fonction;
     // nameCell.textContent = name;
+    entrepriseCell.textContent = entreprise;
     enregistrecell.textContent = enregistre;
-    
+    actionCell.innerHTML = '<button onclick="editContact(this)">Modifier</button> <button onclick="deleteContact(this)">Supprimer</button>'; // Boutons pour modifier et supprimer
+
+    updateContactCount();
+
     // Réinitialiser le formulaire
     document.getElementById('contactForm').reset();
+}
+
+function updateContactCount() {
+    // Récupérer le nombre de lignes dans le tableau
+    const contactCount = document.getElementById('contactTableBody').getElementsByTagName('tr').length;
+    // Mettre à jour le nombre de contacts affiché
+    document.getElementById('contactCount').textContent = contactCount;
+}
+
+function editContact(button) {
+    const row = button.parentNode.parentNode;
+    const prenom = row.cells[0].textContent;
+    const phone = row.cells[1].textContent;
+    const email = row.cells[2].textContent;
+    const enregistre = row.cells[3].textContent;
+
+    document.getElementById('prenom').value = prenom;
+    document.getElementById('phone').value = phone;
+    document.getElementById('email').value = email;
+
+    // Supprimer la ligne du tableau
+    row.remove();
+
+    // Mettre à jour le nombre de contacts affiché
+    updateContactCount();
+}
+
+function deleteContact(button) {
+    // Récupérer la ligne du contact
+    const row = button.parentNode.parentNode;
+    // Supprimer la ligne du tableau
+    row.remove();
+
+    // Mettre à jour le nombre de contacts affiché
+    updateContactCount();
 }
 
 // bouton enregistre
@@ -104,7 +145,15 @@ function afficher() {
 function masquer() {
     document.querySelector('#libelles'); style.display = "none";
 }
-
+function closeLabel() {
+    document.getElementById('libelleContent').style.display = 'none';    
+}
+function saveLabel() {
+    const labelInput = document.getElementById('labelInput').value;
+    const copen = document.getElementById('copen');
+    copen.insertAdjacentHTML('afterend', `<span>${copen}</span>`);
+    closeLabel();
+}
 bopen.addEventListener("click",function () {
     afficher()
 });
