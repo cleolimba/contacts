@@ -19,22 +19,15 @@ valDome.addEventListener('click', function(){
 
 // propriéte pour faire fonctionner le bouton ajouter contacts
 
-document.querySelector('.addContact').addEventListener('click', function(){
-    
-    const main_content = document.getElementById('main-content');
-    const contactsContent = document.getElementById('contents');
-    const popupForm = document.getElementById('popup');
-
-    if (popupForm.classList.contains("invisible")) {
-    console.log(document.getElementById('contents'))
-        contactsContent.classList.add("invisible");
-        popupForm.classList.remove("invisible");
-        
-    }else {
-        contactsContent.classList.remove("invisible");
-        popupForm.classList.add("invisible");
-    }
-});
+const btnContacts = document.getElementById('btnContacts');
+const contents = document.getElementById('contents');
+const popup = document.getElementById('popup');
+const tableau = document.getElementById("tableau");
+btnContacts.addEventListener('click', function(evt){
+    contents.style.display = "none";
+    popup.style.display = "block";/*===============================================================*/
+    tableau.style.display = "none";
+})
 
 // propriéte pour enregistre le tableau
 
@@ -54,8 +47,8 @@ function addContact() {
 
     // Insérer les nouvelles cellules
     const prenomcell = newRow.insertCell(0);
-    const phoneCell = newRow.insertCell(1);
-    const emailCell = newRow.insertCell(2);
+    const emailCell = newRow.insertCell(1);
+    const phoneCell = newRow.insertCell(2);
     // const fonctioncell = newRow.insertCell(3);
     // const nameCell = newRow.insertCell(1);
     const entrepriseCell = newRow.insertCell(3);
@@ -89,13 +82,13 @@ function updateContactCount() {
 function editContact(button) {
     const row = button.parentNode.parentNode;
     const prenom = row.cells[0].textContent;
-    const phone = row.cells[1].textContent;
-    const email = row.cells[2].textContent;
+    const email = row.cells[1].textContent;
+    const phone = row.cells[2].textContent;
     const enregistre = row.cells[3].textContent;
 
     document.getElementById('prenom').value = prenom;
-    document.getElementById('phone').value = phone;
     document.getElementById('email').value = email;
+    document.getElementById('phone').value = phone;
 
     // Supprimer la ligne du tableau
     row.remove();
@@ -122,31 +115,40 @@ document.querySelector('.btnContact').addEventListener('click', function(){
     const contactsContent = document.getElementById('contents');
     const tableauContacts = document.getElementById('tableau');
 
-    if (tableauContacts.classList.contains("invisibles")) {
-    console.log(document.getElementById('contents'))
-        contactsContent.classList.add("invisibles");
-        tableauContacts.classList.remove("invisibles");
+    popup.style.display = "none";
+    contents .style.display = "none";
+    tableauContacts.style.display = "block";
+    
+    // if (tableauContacts.classList.contains("invisibles")) {
+    //     contactsContent.classList.add("invisibles");
+    //     tableauContacts.classList.remove("invisibles");
+    //     popup.style.display = "none";
+    //     console.log("ffffff")
         
-    }else {
-        contactsContent.classList.remove("invisibles");
-        tableauContacts.classList.add("invisibles");
-    }
+    // // }else {
+    //     contactsContent.classList.remove("invisibles");
+    //     tableauContacts.classList.add("invisibles");
+    // }
 });
 
 //la partie libellés
 
 let bopen = document.querySelector('#open');
 let btnreset = document.querySelector('#btnreset');
+const btnLibelle = document.getElementById("btnLibelle");
 
 function afficher() {
     document.querySelector('#btnLibelle').style.display="flex";
-    console.log(document.querySelector('#libelles'));
+    // console.log(document.querySelector('#libelles'));
 }
 function masquer() {
-    document.querySelector('#libelles'); style.display = "none";
+    document.querySelector('#libelles');
+    //  style.display = "none";
+    btnLibelle.style.display = "none";
 }
 function closeLabel() {
-    document.getElementById('libelleContent').style.display = 'none';    
+    document.getElementById('libelleContent').style.display = 'none'; 
+
 }
 function saveLabel() {
     const labelInput = document.getElementById('labelInput').value;

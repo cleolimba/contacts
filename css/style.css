@@ -31,7 +31,7 @@ body{
   align-items: center;
   justify-content: space-around;
   padding-right: 60%;
-  background-color: violet;
+  /* background-color: violet; */
 }
 .headerNavigation{
   display: flex;
@@ -55,12 +55,12 @@ body{
 
 .main__menu{
   width: 20%;
-  background-color: red;
+  /* background-color: red; */
   height: 400px;
 }
 .main__content{
   width: 80%;
-  background-color: yellow;
+  /* background-color: yellow; */
   height: 500px;
   border-radius: 3.5%;
 }
@@ -272,7 +272,7 @@ ion-icon:hover{
 .popup{
   /* display: flex; */
   /* justify-content: center; */
-  background-color: yellowgreen;
+  /* background-color: yellowgreen; */
   padding-left: 5%;
 }
 .invisible{
