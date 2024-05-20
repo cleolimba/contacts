@@ -31,7 +31,6 @@ body{
   align-items: center;
   justify-content: space-around;
   padding-right: 60%;
-  /* background-color: violet; */
 }
 .headerNavigation{
   display: flex;
@@ -48,20 +47,20 @@ body{
 }
 
 .main{
-  margin-top: 5%;
+  margin-top: 3%;
   width: 100%;
+  height: 100%;
   display: flex;
 }
 
 .main__menu{
   width: 20%;
-  /* background-color: red; */
   height: 400px;
 }
 .main__content{
   width: 80%;
-  /* background-color: yellow; */
-  height: 500px;
+  background-color: var(--white);
+  height: 580px;
   border-radius: 3.5%;
 }
 .main-content-fill{
@@ -270,40 +269,21 @@ ion-icon:hover{
 /* style sur la page ajouter les contacts */
 
 .popup{
-  /* display: flex; */
-  /* justify-content: center; */
-  /* background-color: yellowgreen; */
+  width: 60%;
+  height: 110%;
+  display: flex;
+  justify-content: center;
   padding-left: 5%;
+  padding-left: 10%;
 }
 .invisible{
   display: none;
-}
-.image{
-  width: 50%;
-}
-.premierePartie{
-  display: flex;
-  align-items: center;
-  gap: 90%;
-  /* justify-content: space-between; */
-}
-.partieUne{
-  width: 90%;
-  height: 40px;
-  background: transparent;
-  border-radius: 20px;
-  text-align: center;
-  display: flex;
-  align-items: center;
 }
 .submit{
   border: none;
   color: #CCCCCC;
 }
-.partieUne:hover{
-  cursor: pointer;
-  background-color: var(--gray);
-}
+
 .imageContact{
   display: flex;
   align-items: end;
@@ -338,10 +318,6 @@ ion-icon:hover{
   align-items: center;
   gap: 2.5%;
 }
-.textzone{
-  width: 30%;
-  height: 30px;
-}
 .btnNom{
   padding-left: 5%;
   display: flex;
@@ -352,8 +328,8 @@ ion-icon:hover{
 
 /* listes des contacts */
 
-.tableau{
-  background-color: chartreuse;
+table {
+  border: none;
 }
 .invisibles{
   display: none;
@@ -366,7 +342,6 @@ ion-icon:hover{
   align-items: center;
 }
 .labelBtn{
-  background-color: rebeccapurple;
   padding: 14px 20px;
   margin: 8px 0;
   border: none;
@@ -414,7 +389,6 @@ ion-icon:hover{
 .submit{
   width: auto;
   padding: 10px 20px;
-  background: red;
 }
 
 /* partie tableau */
@@ -424,6 +398,7 @@ form {
 }
 table {
   width: 100%;
+  border: none;
   border-collapse: collapse;
 }
 table, th, td {
@@ -432,4 +407,88 @@ table, th, td {
 th, td {
   padding: 10px;
   text-align: left;
+  border: none;
+}
+
+/* partie formulaire */
+
+.imageContact{
+  width: 40%;
+  height: auto;
+}
+.libelles{
+  border-radius: 5px;
+  border: 1px solid var(--gray);
+}
+.libelles:hover{
+  background: var(--blue);
+}
+.champPrenom{
+  display: flex;
+  align-items: center;
+  width: 50%;
+  height: 35px;
+  gap: 6%;
+  margin-top: 6%;
+}
+input{
+  width: 85%;
+  height: 85%;
+}
+.champNoms{
+  display: flex;
+  align-items: center;
+  width: 50%;
+  height: 35px;
+  gap: 6%;
+  margin-top: 2%;
+  margin-left: 8%;
+}
+.entreprise{
+  display: flex;
+  align-items: center;
+  width: 50%;
+  height: 35px;
+  gap: 6%;
+  margin-top: 2%;
+}
+.entrepriseFonction{
+  display: flex;
+  align-items: center;
+  width: 50%;
+  height: 35px;
+  margin-top: 2%;
+  margin-left: 8%;
+  gap: 6%;
+}
+.mail{
+  display: flex;
+  align-items: center;
+  width: 50%;
+  height: 35px;
+  gap: 6%;
+  margin-top: 2%;
+}
+.phones{
+  display: flex;
+  align-items: center;
+  width: 50%;
+  height: 35px;
+  gap: 6%;
+  margin-top: 2%;
+}
+.btnEnregistre{
+  background: var(--gray);
+  border: 1px solid var(--gray);
+  font-family: "Roboto", sans-serif;
+  margin-top: 6%;
+  margin-left: 10%;
+  width: 25%;
+  height: 25%;
+  border-radius: 10%;
+  cursor: pointer;
+}
+.btnEnregistre:hover{
+  background: var(--clear);
+  border: 1px solid var(--clear);
 }
