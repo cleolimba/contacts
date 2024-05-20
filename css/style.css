@@ -409,7 +409,9 @@ th, td {
   text-align: left;
   border: none;
 }
-
+thead,tbody{
+  border: none;
+}
 /* partie formulaire */
 
 .imageContact{
